@@ -6,16 +6,15 @@ import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-       BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-       int num = Integer.parseInt(bufferedReader.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i = num; i <= num; i++) {
-            for(int j=1; j<=9; j++) {
-                System.out.printf("%d * %d = %d", num, j, num*j);
-                System.out.println();
-            }
-            
+        int y = Integer.parseInt(br.readLine());
+
+        if(y%4==0) {
+            if(y%400==0) System.out.println("1");
+            else if(y%100==0) System.out.println("0");
+            else System.out.println("1");
         }
-
+        else System.out.println("0");
     }
 }
